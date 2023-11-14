@@ -13,8 +13,8 @@ const Header = () => {
 <h3>Onu Princeley Toochukwu</h3>
 <p>Web alchemist turning ideas into code. Crafting seamless online experiences with a touch of magic. Your digital dreams, my code reality.</p>
 <div  className="header__cta">
-<a href="#contact">Let Talk</a>
-<a href="#portfolio">My Works</a>
+<a href="#contact" className="btn primary">Let Talk</a>
+<a href="#portfolio" className="btn light">My Works</a>
 
 </div>
 <div className="header__socials">
