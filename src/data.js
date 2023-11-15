@@ -1,6 +1,7 @@
-import { FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaAward, FaLinkedin, FaSmile, FaTwitter } from "react-icons/fa";
 
 import { AiFillGithub } from "react-icons/ai";
+import { BiBook } from "react-icons/bi";
 
 const data = [
     { id: 1, link: "#", title: "Home" },
@@ -16,4 +17,10 @@ const data2 = [
     { id: 3, link: "https://twitter.com/onu_princeley", icon: <FaTwitter /> }
 ];
 
-export { data, data2 };
+const data3 = [
+    { id: 1, icon: <FaAward/>, title: "Experience", desc: "2+ Years working" },
+    { id: 2, icon: <BiBook/>, title: "Projects", desc: "6+ Completed" },
+    { id: 3, icon: <FaSmile />, title: "Clients", desc: "5+ Happy Clients" },
+];
+
+export { data, data2, data3 };
