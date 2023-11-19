@@ -1,9 +1,31 @@
 import "./services.css"
 
+import Card from "../../Components/card/Card"
+import { data4 } from "../../data"
+
 const Services = () => {
   return (
    <section id="services">
-services
+<h2>My Services</h2>
+<p>I give you the best in all the services below</p>
+<div className="container services__container">
+{
+data4.map((item)=>(
+<Card key={item.id} className="service light">
+<div className="service__icon">
+{item.icon}
+</div>
+<div className="service__details">
+<h4>{item.title}</h4>
+<p>{item.desc}</p>
+</div>
+</Card>
+))
+
+}
+</div>
+
+
    </section>
   )
 }
