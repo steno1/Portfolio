@@ -1,11 +1,15 @@
-import React from 'react'
+// Importing necessary libraries
 
-const CategoryButton = ({category, className, onChangeCategory}) => {
+import React from 'react'; // Importing 'React' library
+
+// Declaring the 'CategoryButton' functional component
+const CategoryButton = ({ category, className, onChangeCategory }) => {
   return (
-   <button className={className} onClick={()=>onChangeCategory(category)}>
-{category}
-   </button>
-  )
-}
+    // Button component for filtering categories
+    <button className={className} onClick={() => onChangeCategory(category)}>
+      {category} {/* Displaying the category */}
+    </button>
+  );
+};
 
-export default CategoryButton
+export default CategoryButton; // Exporting the 'CategoryButton' component as default

@@ -1,8 +1,13 @@
 import { FaAward, FaLinkedin, FaServer, FaSmile, FaTwitter } from "react-icons/fa";
 
 import { AiFillGithub } from "react-icons/ai";
+import { AiOutlineInstagram } from "react-icons/ai";
+import { AiOutlineTwitter } from "react-icons/ai";
 import { BiBook } from "react-icons/bi";
+import { FaWhatsapp } from "react-icons/fa";
 import HappyAvatar from "./happyAvatar.png"
+import {HiOutlineMail} from "react-icons/hi"
+import { RiMessengerLine } from "react-icons/ri";
 import {RiReactjsLine} from "react-icons/ri"
 import image1 from "./onuPic.jpg"
 
@@ -112,8 +117,24 @@ answer:" This depends on the complexity of the project, your readiness and your 
     answer:"No! Hosting and domain is taken care of separately. You can pay for it or take care of it on your own if you know how to."
 }
 
-
-
+]
+const data8=[
+   {id:1, icon:<HiOutlineMail/>, link:"mailto:onuprinceley@gmail.com"}
+,{id:2, icon:<FaWhatsapp/>, link:"https://wa.me/+2348142534211"},
+{id:3, icon:<RiMessengerLine/>, link:"https://web.facebook.com/messages/t/princeley.toochukwu"}
+]
+const links=[
+    {id:1, link:"#", title:"Home"},
+    {id:2, link:"#about", title:"About"},
+    {id:3, link:"#services", title:"Services"},
+    {id:4, link:"#portfolio", title:"Portfolio"},
+    {id:5, link:"#contact", title:"Contact"},
+]
+const socials=[
+    {id:1, link: "https://www.instagram.com/onuprinceley/", icon:<AiOutlineInstagram/>},
+    {id:2, link:"https://twitter.com/onu_princeley", icon:<AiOutlineTwitter/>},
+    {id:3, link:"https://github.com/steno1", icon:<AiFillGithub/>}
 ]
 
-export { data, data2, data3, data4, data5, data6, data7 };
+export { data, data2, data3, data4, data5,
+     data6, data7, data8, socials, links};

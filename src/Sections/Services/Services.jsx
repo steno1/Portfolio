@@ -1,33 +1,38 @@
-import "./services.css"
+// Importing the CSS file for the 'Services' component
 
-import Card from "../../Components/card/Card"
-import { data4 } from "../../data"
+import "./services.css";
 
+import Card from "../../Components/card/Card"; // Importing 'Card' component
+import { data4 } from "../../data"; // Importing 'data4' from external 'data' file
+
+// Importing necessary components and resources
+
+
+
+// Declaring the 'Services' functional component
 const Services = () => {
   return (
-   <section id="services">
-<h2>My Services</h2>
-<p>I give you the best in all the services below</p>
-<div className="container services__container">
-{
-data4.map((item)=>(
-<Card key={item.id} className="service light">
-<div className="service__icon">
-{item.icon}
-</div>
-<div className="service__details">
-<h4>{item.title}</h4>
-<p>{item.desc}</p>
-</div>
-</Card>
-))
+    // Services section
+    <section id="services">
+      <h2>My Services</h2> {/* Title */}
+      <p>I give you the best in all the services below</p> {/* Description */}
+      <div className="container services__container">
+        {/* Mapping through 'data4' to display service cards */}
+        {data4.map((item) => (
+          <Card key={item.id} className="service light">
+            {/* Service icon */}
+            <div className="service__icon">{item.icon}</div>
+            <div className="service__details">
+              {/* Service title */}
+              <h4>{item.title}</h4>
+              {/* Service description */}
+              <p>{item.desc}</p>
+            </div>
+          </Card>
+        ))}
+      </div>
+    </section>
+  );
+};
 
-}
-</div>
-
-
-   </section>
-  )
-}
-
-export default Services
+export default Services; // Exporting the 'Services' component as default

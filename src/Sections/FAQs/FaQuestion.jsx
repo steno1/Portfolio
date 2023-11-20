@@ -1,19 +1,26 @@
-import Card from "../../Components/card/Card"
-import { FaPlus } from "react-icons/fa6";
+import Card from "../../Components/card/Card";
+import { FiMinus } from "react-icons/fi";
+import { FiPlus } from "react-icons/fi";
+import { useState } from "react";
 
-const FaQuestion = ({faq}) => {
+const FaQuestion = ({ faq }) => {
+  const [showAnswer, setShowAnswer] = useState(false);
+
+  const toggleAnswer = () => {
+    setShowAnswer(!showAnswer);
+  };
+
   return (
-  <Card className='faq'>
-<div>
-    <h5 className="faq__question">
-{faq.question}
+    <Card className='faq' onClick={toggleAnswer}>
+      <div>
+        <h5 className="faq__question">{faq.question}</h5>
+        <button className="faq__icon" >
+          {showAnswer ? <FiMinus /> : < FiPlus />}
+        </button>
+      </div>
+      {showAnswer && <p className="faq__answer">{faq.answer}</p>}
+    </Card>
+  );
+};
 
-    </h5>
-    <button className="faq__icon"><FaPlus /></button>
-</div>
-<p className="faq__answer">{faq.answer}</p>
-  </Card>
-  )
-}
-
-export default FaQuestion
+export default FaQuestion;
