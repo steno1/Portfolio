@@ -5,14 +5,11 @@ import "./Navbar.css";
 import { IoColorPaletteSharp } from 'react-icons/io5'; // Importing the 'IoColorPaletteSharp' icon from 'react-icons/io5'
 import Logo  from "../../Images/my logo.webp"; // Importing the logo image
 import { data } from "../../data"; // Importing 'data' from external 'data' file
-
-// Importing necessary components and resources
-
-
-
+import { useModalContext } from "../../Context/ModalContext";
 
 // Declaring the 'Navbar' functional component
 const Navbar = () => {
+  const {showModalHandler}=useModalContext();
   return (
     // Navigation section
     <nav>
@@ -33,7 +30,7 @@ const Navbar = () => {
           ))}
         </ul>
         {/* Theme icon button */}
-        <button id="theme__icon"><IoColorPaletteSharp/></button> {/* Displaying theme icon */}
+        <button id="theme__icon" onClick={showModalHandler}><IoColorPaletteSharp/></button> {/* Displaying theme icon */}
       </div>
     </nav>
   );

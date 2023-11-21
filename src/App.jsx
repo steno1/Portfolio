@@ -4,6 +4,7 @@ import FAQs from "./Sections/FAQs/FAQs"
 import FloatingNav from "./Sections/Floating-nav/FloatingNav"
 import Footer from "./Sections/Footer/Footer"
 import Header from "./Sections/Header/Header"
+import Modal from "./Components/modal/Modal"
 import Navbar from "./Sections/Navbar/Navbar"
 import Portfolio from "./Sections/Portfolio/Portfolio"
 import Services from "./Sections/Services/Services"
@@ -21,6 +22,7 @@ const App = () => {
      <FAQs/>
      <Contact/>
      <Footer/>
+     <Modal/>
      {/* <FloatingNav/>*/}
      
     </main>
