@@ -9,10 +9,13 @@ import Navbar from "./Sections/Navbar/Navbar"
 import Portfolio from "./Sections/Portfolio/Portfolio"
 import Services from "./Sections/Services/Services"
 import Testimonials from "./Sections/testimonials/Testimonials"
+import Theme from "./Theme/Theme"
+import { useThemeContext } from "./Context/ThemeContext"
 
 const App = () => {
+  const {themeState}=useThemeContext();
   return (
-    <main>
+    <main className={`${themeState.primary} ${themeState.background}`}>
      <Navbar/> 
      <Header/>
      <About/>
@@ -22,7 +25,7 @@ const App = () => {
      <FAQs/>
      <Contact/>
      <Footer/>
-     <Modal/>
+     <Theme/>
      {/* <FloatingNav/>*/}
      
     </main>

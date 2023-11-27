@@ -136,5 +136,19 @@ const socials=[
     {id:3, link:"https://github.com/steno1", icon:<AiFillGithub/>}
 ]
 
+const primaryColors=[
+    {className:"color-1"},
+    {className:"color-2"},
+    {className:"color-3"},
+    {className:"color-4"},
+    {className:"color-5"},
+    {className:"color-6"}
+]
+const backgroundColors=[
+    {className:"bg-1"},
+    {className:"bg-2"}
+]
+
 export { data, data2, data3, data4, data5,
-     data6, data7, data8, socials, links};
+     data6, data7, data8, socials, links,
+    primaryColors, backgroundColors};
