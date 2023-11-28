@@ -7,7 +7,7 @@ const Contact = () => {
     <section id="contact">
 <h2>Get In Contact</h2>
 <p>Send me a message via any of the links below</p>
-<div className="container contact__container">
+<div className="container contact__container" data-aos="fade-up">
 {
 data8.map(contact=>(
   <a key={contact.id} href={contact.link} target="_blank"

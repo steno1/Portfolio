@@ -7,7 +7,7 @@ import React from 'react'; // Importing 'React' library
 const Projects = ({ projects }) => {
   return (
     // Container for displaying projects
-    <div className='portfolio__projects'>
+    <div className='portfolio__projects' data-aos="fade-up">
       {/* Mapping through projects to display 'MyProject' component */}
       {projects.map(project => (
         <MyProject key={project.id} project={project} /> // 'MyProject' component with unique key and project data

@@ -5,10 +5,6 @@ import "./services.css";
 import Card from "../../Components/card/Card"; // Importing 'Card' component
 import { data4 } from "../../data"; // Importing 'data4' from external 'data' file
 
-// Importing necessary components and resources
-
-
-
 // Declaring the 'Services' functional component
 const Services = () => {
   return (
@@ -16,7 +12,7 @@ const Services = () => {
     <section id="services">
       <h2>My Services</h2> {/* Title */}
       <p>I give you the best in all the services below</p> {/* Description */}
-      <div className="container services__container">
+      <div className="container services__container" data-aos="fade-up">
         {/* Mapping through 'data4' to display service cards */}
         {data4.map((item) => (
           <Card key={item.id} className="service light">

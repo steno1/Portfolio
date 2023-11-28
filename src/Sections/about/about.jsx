@@ -8,18 +8,11 @@ import { HiDownload } from "react-icons/hi"; // Importing the 'HiDownload' icon 
 import cv from "../../Images/headerImage.jpg"; // Importing the CV image
 import { data3 } from "../../data"; // Importing 'data3' from external 'data' file
 
-// Importing necessary components and resources
-
-
-
-
-
-
 // Declaring the 'About' functional component
 const About = () => {
   return (
     // Creating a section with an ID of 'about'
-    <section id='about'>
+    <section id='about' data-aos="fade-in">
       {/* Container for the about section */}
       <div className="container about__container">
         {/* Left section of the about */}
