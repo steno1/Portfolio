@@ -149,6 +149,7 @@ const backgroundColors=[
     {className:"bg-2"}
 ]
 
+
 export { data, data2, data3, data4, data5,
      data6, data7, data8, socials, links,
     primaryColors, backgroundColors};

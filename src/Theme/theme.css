@@ -80,11 +80,32 @@ background: #111;
 }
 /*MEDIA QUERIES FOR PHONE*/
 @media screen and (max-width:600px) {
-    .card.theme__modal{
-        width:var(--container-width-md);
-        padding: 3rem 1.5rem;
+    .card.theme__modal {
+        width: calc(100% - 2rem); /* Adjust width to fit the screen with a small margin */
+        padding: 2rem; /* Reduce padding for smaller screens */
+        max-width: 90%; /* Set a maximum width */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
     }
-    .theme__primary-colors{
-        gap: 0.6rem;
+    .card.theme__modal h3 {
+        font-size: 1.8rem; /* Adjust heading sizes for better readability on smaller screens */
+    }
+    .card.theme__modal small {
+        width: 100%; /* Adjust width for smaller screens */
+    }
+    .theme__primary-colors {
+        gap: 0.6rem; /* Reduce gap between primary colors */
+    }
+    .theme__primary-colors button {
+        width: 1.5rem; /* Decrease the size of color buttons */
+        height: 1.5rem;
+        font-size: 0.7rem; /* Adjust font size for better visibility */
+    }
+    .theme__background-colors {
+        gap: 1rem; /* Adjust gap between background colors */
+    }
+    .theme__background-colors button {
+        width: 5rem; /* Adjust width of background color buttons */
+        height: 2rem;
+        font-size: 0.8rem; /* Adjust font size for better visibility */
     }
 }

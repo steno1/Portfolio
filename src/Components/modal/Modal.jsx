@@ -7,14 +7,6 @@ import { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import { useModalContext } from "../../Context/ModalContext";
 
-// Importing necessary components and functions from libraries
-
-
-
-
-// Importing the custom hook for accessing modal context
-
-
 // Defining the Modal component
 const Modal = ({ className, children }) => {
   // Using the useModalContext hook to get showModal state and closeModalHandler function
