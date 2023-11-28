@@ -1,7 +1,7 @@
 # Portfolio App Documentation
 
 This repository contains a portfolio app developed using React, providing a comprehensive showcase of various functionalities and
-features to present personal or professional information. The app incorporates multiple sections including Navbar, Header, About, Services, Portfolio, Testimonials,
+features to present my personal and professional information. The app incorporates multiple sections including Navbar, Header, About, Services, Portfolio, Testimonials,
 FAQs, Contacts, Footer, and includes several advanced features such as theme customization, LocalStorage persistence, a floating Navbar, animations on scroll, and more.
 
 ## Features
@@ -9,14 +9,14 @@ FAQs, Contacts, Footer, and includes several advanced features such as theme cus
 ### Sections
 
 1. **Navbar:** A navigation bar that facilitates easy movement across different sections of the portfolio.
-2. **Header:** An introductory section providing a brief overview or welcome message.
-3. **About:** Detailed information about the individual or entity behind the portfolio.
+2. **Header:** An introductory section providing a brief overview 
+3. **About:** Brief info about me.
 4. **Services:** Showcase of services offered or skills possessed.
-5. **Portfolio:** Display of past projects, works, or achievements.
+5. **Portfolio:** Display my past projects and works.
 6. **Testimonials:** Customer or client feedback and testimonials.
 7. **FAQs:** Frequently Asked Questions section for addressing common queries.
 8. **Contacts:** Contact information for potential communication or inquiries.
-9. **Footer:** Closing section with additional information or links.
+9. **Footer:** Closing section with additional information and links.
 
 ### Advanced Features
 
