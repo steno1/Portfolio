@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import About from "./Sections/about/about";
 import Contact from "./Sections/Contact/Contact";
@@ -13,16 +13,21 @@ import Testimonials from "./Sections/testimonials/Testimonials";
 import Theme from "./Theme/Theme";
 import { useThemeContext } from "./Context/ThemeContext";
 
+// Defining the main App component
 const App = () => {
-  // Retrieve themeState and mainRef using React Hooks
-  const { themeState } = useThemeContext(); // Accessing theme information using useContext from ThemeContext
-  const mainRef = useRef(); // Creating a reference to the main HTML element
+  // Accessing themeState from ThemeContext
+  const { themeState } = useThemeContext();
 
-  // State variables for managing floating navigation display and site position
+  // Creating a reference to the main section of the website
+  const mainRef = useRef();
+
+  // State to control the visibility of the floating navigation
   const [showFloatingNav, setShowFloatingNav] = useState(true);
+
+  // State to keep track of the vertical position of the site
   const [siteYposition, setSiteYposition] = useState(0);
 
-  // Function to display the floating navigation
+  // Function to show the floating navigation
   const showFloatingNavHandler = () => {
     setShowFloatingNav(true);
   };
@@ -32,32 +37,32 @@ const App = () => {
     setShowFloatingNav(false);
   };
 
-  // Function to toggle the floating navigation based on scroll position
-  const floatingNavToggleHandler = () => {
-    // Check if the user scrolled up or down at least 20px
-    if (
-      siteYposition < mainRef?.current?.getBoundingClientRect().y - 20 ||
-      siteYposition > mainRef?.current?.getBoundingClientRect().y + 20
-    ) {
-      showFloatingNavHandler(); // Display floating navigation if conditions are met
-    } else {
-      hideFloatingNavHandler(); // Hide floating navigation if conditions are not met
-    }
-    setSiteYposition(mainRef?.current?.getBoundingClientRect().y); // Update site position
-  };
-
-  // UseEffect hook to handle floating navigation based on scroll behavior
+  // Effect to handle the showing and hiding of floating navigation based on siteYposition changes
   useEffect(() => {
-    // Set interval to check scroll position every 4000 milliseconds
-    const checkYposition = setInterval(floatingNavToggleHandler, 4000);
-    // Cleanup function to clear the interval
-    return () => clearInterval(checkYposition);
-  }, [ siteYposition]);
+    // Function to toggle floating navigation based on site's vertical position
+    const floatingNavToggleHandler = () => {
+      if (
+        siteYposition < mainRef?.current?.getBoundingClientRect().y - 20 ||
+        siteYposition > mainRef?.current?.getBoundingClientRect().y + 20
+      ) {
+        showFloatingNavHandler(); // Show floating navigation
+      } else {
+        hideFloatingNavHandler(); // Hide floating navigation
+      }
+      setSiteYposition(mainRef?.current?.getBoundingClientRect().y); // Update site's vertical position
+    };
 
-  // Return the main App layout
+    // Set interval to check site's vertical position periodically (every 4000 milliseconds)
+    const checkYposition = setInterval(floatingNavToggleHandler, 4000);
+
+    // Clean up the interval to avoid memory leaks when the component unmounts
+    return () => clearInterval(checkYposition);
+  }, [siteYposition]);
+
+  // Rendering the main content of the app
   return (
     <main className={`${themeState.primary} ${themeState.background}`} ref={mainRef}>
-      {/* Render various sections and components */}
+      {/* Different sections of the website */}
       <Navbar />
       <Header />
       <About />
@@ -67,11 +72,11 @@ const App = () => {
       <FAQs />
       <Contact />
       <Footer />
-      <Theme />
-      {/* Render the floating navigation if showFloatingNav is true */}
-      {showFloatingNav && <FloatingNav />}
+      <Theme /> {/* Theme component */}
+      {showFloatingNav && <FloatingNav />} {/* Conditional rendering of FloatingNav */}
     </main>
   );
 };
 
+// Exporting the App component as the default export
 export default App;
