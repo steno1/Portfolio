@@ -46,9 +46,11 @@ To run the application locally, follow these steps:
    
 ## cd your-portfolio-app
 
-##npm install
+## npm install
 
-##
+## npm start
+
+
 
 
    
